@@ -1,597 +1,95 @@
 <!DOCTYPE html>
-<!-- Last Published: Wed Jul 21 2021 11:30:18 GMT+0000 (Coordinated Universal Time) -->
-<html lang="en" data-wf-domain="tricks-multi-step-form.webflow.io"
-data-wf-page="605bb9ef3a4d4d0bcba147c9" data-wf-site=
-"605bb9ef3a4d4d926ca147c6">
+<html lang="en" >
 <head>
-  <meta charset="utf-8">
-  <title>Join Clothier</title>
-  <meta content=
-  "The best way to connect with apparel brands and designers anywhere in South Africa."
-  name="description">
-  <meta content="Join Clothier" property="og:title">
-  <meta content=
-  "The best way to connect with apparel brands and designers anywhere in South Africa."
-  property="og:description">
-  <meta content=
-  "https://assets.website-files.com/5ff760f5b7625a5cf532b46/5ff86ba248884512a2d00d73_Social-share.jpg"
-  property="og:image">
-  <meta content="Join Clothier" property="twitter:title">
-  <meta content=
-  "The best way to connect with apparel brands and designers anywhere in South Africa."
-  property="twitter:description">
-  <meta content=
-  "https://assets.website-files.com/5ff760f5b7625a5cf532b464/5ff86ba248884512a2d00d73_Social-share.jpg"
-  property="twitter:image">
-  <meta property="og:type" content="website">
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="width=device-width, initial-scale=1" name=
-  "viewport">
-  <link href=
-  "https://assets.website-files.com/605bb9ef3a4d4d926ca147c6/css/tricks-multi-step-form.850694193.css"
-  rel="stylesheet" type="text/css">
-  <script src=
-  "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-  type="text/javascript"></script>
-  <script type="text/javascript">
-  WebFont.load({  google: {    families: ["DM Sans:regular,italic,500,700","Fahkwang:regular,500,600,700"]  }});
-  </script>
-  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
-  <script type="text/javascript">
-  !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
-  </script>
-  <link href=
-  "https://assets.website-files.com/605bb9ef3a4d4d926ca147c6/605bb9ef3a4d4d0960a147d7_favicon.png"
-  rel="shortcut icon" type="image/x-icon">
-  <link href=
-  "https://assets.website-files.com/605bb9ef3a4d4d926ca147c6/605bb9ef3a4d4dbe85a147d8_appicon.png"
-  rel="apple-touch-icon">
-  <style>
-  ::selection {background-color: rgba(92,49,255,0.99); color: #FFFFFF; text-shadow: none;}
-  </style>
-  <style>
-  .radio_label, .form_button, .disabled-prev {pointer-events: none;}
-  .form-active {pointer-events: auto !important; background-color: #5c31ff;}
-  </style>
+  <meta charset="UTF-8">
+  <title>CodePen - Multi-step form</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+
 </head>
-
 <body>
-  <div class="overflow">
-    <div class="global">
-      <div class="html w-embed">
-        <style>
-        /* Add all your CSS below */
-
-        /* This converts everything that's EM to PX at 1440px & above screen sizes */
-        @media only screen and (min-width: 1440px) {
-        body {font-size: 14px;}
-        }
-
-        @media only screen and (min-width: 1920px) {
-        .container.is--hero {min-height: auto; height: 100vh; max-height: 1000px;}
-        }
-
-        /* Homepage CSS */
-        .hero__icon, .hero__card-text, .hero__gradient {pointer-events: none;}
-
-        .hero__card, .form_field, .form_success {
-        backdrop-filter: blur(2em);
-        -webkit-backdrop-filter: blur(2em);
-        }
-
-
-.w-webflow-badge {
-display: none !important;
-visibility: hidden !important;} 
-
-
-
-        .hero__card-content {-webkit-mask-image: -webkit-radial-gradient(white, black);}
-
-        .form_heading {-webkit-text-stroke: 1px white;}
-        </style>
-
-
-
-
-      </div>
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2 id="heading">Join Our Vendor Network</h2>
+                <p>Fill out your details below to get started</p>
+                <form id="msform">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active" id="account"><strong>Account</strong></li>
+                        <li id="personal"><strong>Personal</strong></li>
+                        <li id="payment"><strong>Image</strong></li>
+                        <li id="confirm"><strong>Finish</strong></li>
+                    </ul>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div> <br> <!-- fieldsets -->
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Account Information:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 1 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">Email: *</label> <input type="email" name="email" placeholder="Email Id" /> <label class="fieldlabels">Username: *</label> <input type="text" name="uname" placeholder="UserName" /> <label class="fieldlabels">Password: *</label> <input type="password" name="pwd" placeholder="Password" /> <label class="fieldlabels">Confirm Password: *</label> <input type="password" name="cpwd" placeholder="Confirm Password" />
+                        </div> <input type="button" name="next" class="next action-button" value="Next" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Personal Information:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 2 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">First Name: *</label> <input type="text" name="fname" placeholder="First Name" /> <label class="fieldlabels">Last Name: *</label> <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
+                        </div> <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Image Upload:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 3 - 4</h2>
+                                </div>
+                            </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature Photo:</label> <input type="file" name="pic" accept="image/*">
+                        </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="fs-title">Finish:</h2>
+                                </div>
+                                <div class="col-5">
+                                    <h2 class="steps">Step 4 - 4</h2>
+                                </div>
+                            </div> <br><br>
+                            <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                            <div class="row justify-content-center">
+                                <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png" class="fit-image"> </div>
+                            </div> <br><br>
+                            <div class="row justify-content-center">
+                                <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </div>
-    <nav class="section is--nav">
-      <div class="container is--nav">
-        
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
 
-<a href="/" aria-current="page" class=
-        "nav__logo-link w-inline-block w--current"><img src=
-        "https://cdn.shopify.com/s/files/1/0002/7960/9380/files/CLOTHIER_1.svg"
-        loading="lazy" alt="Clothier Logo" class="nav__logo-img"></a>
-        
-
-<div class="mav__right">
-          <div class="nav__menu">
-            <div class="nav__line"></div><a data-color="#f88cd4"
-            href="/" aria-current="page" class=
-            "nav__link w-inline-block w--current">
-            <p class="nav__link-text">Home</p></a><a data-color=
-            "#def141" href="#"
-            target="_blank" class="nav__link w-inline-block">
-            <p class="nav__link-text">About</p></a><a data-color=
-            "#f88cd4" href="#" target=
-            "_blank" class="nav__link w-inline-block">
-            <p class="nav__link-text">
-            Guides</p></a><a data-color="#5c31ff" href=
-            "#" target=
-            "_blank" class="nav__link w-inline-block">
-            <p class="nav__link-text">Contact</p></a><a data-color=
-            "#def141" href="#"
-            target="_blank" class="nav__link w-inline-block">
-            <p class="nav__link-text">Blog</p></a>
-          </div><a href="#" class="nav__icon w-inline-block">
-          <div class="nav__icon-line">
-            <div class="fill is--1"></div>
-          </div>
-          <div class="nav__icon-line">
-            <div class="fill is--2"></div>
-          </div></a> 
-
-
-        </div>
-
-
-      </div>
-    </nav>
-
-
-
-    <section class="section is--hero">
-      <div class="container is--form">
-        <div class="hero__left is--alt">
-          <div class="form w-form">
-            <form id="email-form" name="email-form" data-name=
-            "Email Form" class="form_contain">
-              <div class="question">
-                <h1 class="question_text">Completed</h1>
-                <div class="question_number">
-                  <h1 class="question_text number first">0</h1>
-                  <h1 class="question_text number second">0</h1>
-                </div>
-                <h1 class="question_text">/ <span class=
-                "total-number">10</span></h1>
-              </div>
-              <div data-animation="slide" data-disable-swipe="1"
-              data-duration="500" class="c-slider w-slider">
-                <div class="slider_mask w-slider-mask">
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-                      
-
-<h2 class="form_question">What's your full
-                      name?</h2><input type="text" class=
-                      "form_field w-input" maxlength="256" name=
-                      "Full-name" data-name="Full name"
-                      placeholder="Your name" id="Full-name"
-                      required="true"><a href="#" class=
-                      "form_button w-button">Next</a>
-                    </div>
-                  </div>
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-
-
-                      
-<h2 class="form_question">Choose any category that suits you best.</h2>
-                      <div class=
-                      "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
-                      </div><label class=
-                      "radio_option w-radio"><input type="radio"
-                      data-name="Radio" id="Beginner" name="Radio"
-                      value="Apple" style=
-                      "opacity:0;position:absolute;z-index:-1"><span for="Beginner"
-                      class=
-                      "radio_label w-form-label">CMT</span></label>
-                      <div class=
-                      "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
-                      </div><label class=
-                      "radio_option w-radio"><input type="radio"
-                      data-name="Radio" id="Intermediate" name=
-                      "Radio" value="Huawei" style=
-                      "opacity:0;position:absolute;z-index:-1"><span for="Intermediate"
-                      class=
-                      "radio_label w-form-label">Manufacturer</span></label>
-                      <div class=
-                      "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
-                      </div><label class=
-                      "radio_option w-radio"><input type="radio"
-                      data-name="Radio" id="Professional" name=
-                      "Radio" value="Manufacturer" style=
-                      "opacity:0;position:absolute;z-index:-1"><span for="Professional"
-                      class=
-                      "radio_label w-form-label">Fabric Store</span></label>
-                      <div class=
-                      "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
-                      </div><label class=
-                      "radio_option w-radio"><input type="radio"
-                      data-name="Radio" id="Expert" name="Radio"
-                      value="Xiaomi" style=
-                      "opacity:0;position:absolute;z-index:-1"><span for="Expert"
-                      class=
-                      "radio_label w-form-label">Other</span></label>
-                    </div>
-                  </div>
-
-
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-                      <h2 class="form_question">How do we contact you?</h2>
-
-<input type="text"
-                      class="form_field w-input" maxlength="100"
-                      name="Username" data-name="Username"
-                      placeholder="Email Address" id="Username"
-                      required="">
-
-<input type="text"
-                      class="form_field w-input" maxlength="100"
-                      name="Username" data-name="Username"
-                      placeholder="Phone Number" id="Username"
-                      required="">
-
-<a href="#" class=
-                      "form_button w-button">Next</a>
-                    </div></div>
-
-
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-                      <h2 class="form_question">What's your phone number?</h2><input type="text"
-                      class="form_field w-input" maxlength="10"
-                      name="Phone" data-name="Phone"
-                      placeholder="012 123 1234" id="Phone"
-                      required=""><a href="#" class=
-                      "form_button w-button">Next</a>
-
-
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-                      <h2 class="form_question">What's your minimum order quantity?</h2><input type="text"
-                      class="form_field w-input" maxlength="100"
-                      name="Username" data-name="Username"
-                      placeholder="0" id="MOQ"
-                      required=""><a href="#" class=
-                      "form_button w-button">Next</a>
-
-
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-                      <h2 class="form_question">Where is your business located?</h2>
-                      <div class=
-                      "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
-                      </div><label class=
-                      "radio_option w-radio"><input type="radio"
-                      data-name="Learn" id="Beginner" name="Learn"
-                      value="Beginner" style=
-                      "opacity:0;position:absolute;z-index:-1"><span for="Beginner-2"
-                      class=
-                      "radio_label w-form-label">Phone</span></label>
-                      
-
-<div class=
-                      "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
-                      </div><label class=
-                      "radio_option w-radio"><input type="radio"
-                      data-name="Learn" id="Intermediate" name=
-                      "Learn" value="Intermediate" style=
-                      "opacity:0;position:absolute;z-index:-1"><span for="Intermediate-2"
-                      class=
-                      "radio_label w-form-label">Email</span></label>
-                    </div>
-                  </div>
-                  <div class="slider_slide w-slide">
-                    <div class="slider_slide-fill">
-                      <h2 class="form_question">Join The Community</h2><input type="submit" value=
-                      "Sign Up" data-wait="Please wait..." class=
-                      "form_submit w-button">
-                    </div>
-                  </div>
-                </div>
-                <div class=
-                "form_prev disabled-prev w-slider-arrow-left">
-                  <img src=
-                  "https://assets.website-files.com/605bb9ef3a4d4d926ca147c6/605bb9ef3a4d4d564aa147d1_arrow.svg"
-                  loading="lazy" alt="" class="icon">
-                  <p class="form_prev-text">Prev</p>
-                </div>
-                <div class="form_next w-slider-arrow-right">
-                  <div class="w-icon-slider-right"></div>
-                </div>
-                <div class="slider_nav w-slider-nav w-round"></div>
-              </div>
-              <div class="form_progress">
-                <div class="form_progress-fill"></div>
-                <div class="form_progress-dot">
-                  <div class="form_progress-box">
-                    <p class="form_progress-text"><span class=
-                    "form_percent">0</span>%</p>
-                  </div>
-                  <div class="form_progress-circle"></div>
-                </div>
-              </div>
-            </form>
-            <div class="form_success w-form-done">
-              <div>
-                Thank you! You're account is setup.
-              </div>
-            </div>
-            <div class="form_error w-form-fail">
-              <div>
-                Oops! Something went wrong.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero__gradient is--3"></div>
-        <div class="hero__gradient">
-          <div class="hero__gradient is--other"></div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script src=
-  "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=605bb9ef3a4d4d926ca147c6"
-  type="text/javascript" integrity=
-  "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-  <script src=
-  "https://assets.website-files.com/605bb9ef3a4d4d926ca147c6/js/tricks-multi-step-form.bf3d93181.js"
-  type="text/javascript"></script>
-  <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  <script>
-
-
-  function moveLine(myLine) {
-
-  var myDistance =  myLine.offset().left - $('.nav__menu').offset().left;
-  var myWidth = myLine.width();
-  var myColor = myLine.parent().data( "color" );
-
-  $('.nav__line').css({'background-color': myColor, 'width': myWidth + 'px', 'transform': 'translateX(' + myDistance + 'px)'});
-
-  }
-
-
-  if ( $('.w--current p').length > 0) {
-  moveLine( $('.w--current p') );
-  }
-
-
-  window.onresize = function(){ 
-
-  if ( $('.w--current p').length > 0) {
-  moveLine( $('.w--current p') );
-  }
-
-  }
-
-
-  $( ".nav__link" ).mouseenter(function() {
-
-
-        moveLine( $(this).find('p') );
-
-  });
-
-
-
-  $( ".nav__link" ).mouseleave(function() {
-
-  if ( $('.w--current p').length > 0) {
-  moveLine( $('.w--current p') );
-  } else {
-  $('.nav__line').css('width', '0px');
-  }
-
-
-  });
-  </script>
-  <main role="main" class="main-content">
-    <canvas id="noise" class="noise"></canvas>
-  </main>
-  <style>
-  .main-content {
-       z-index: 9999999999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    height: 100vh;
-    background: transparent;
-  }
-  .noise {
-    z-index: 9999999999;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    pointer-events: none;
-    opacity: .05;
-  }
-  </style>
-  <script>
-  const noise = () => {
-    let canvas, ctx;
-    let wWidth, wHeight;
-    let noiseData = [];
-    let frame = 0;
-    let loopTimeout;
-    // Create Noise
-    const createNoise = () => {
-        const idata = ctx.createImageData(wWidth, wHeight);
-        const buffer32 = new Uint32Array(idata.data.buffer);
-        const len = buffer32.length;
-        for (let i = 0; i < len; i++) {
-            if (Math.random() < 0.1) {
-                buffer32[i] = 0xff000000;
-            }
-        }
-        noiseData.push(idata);
-    };
-    // Play Noise
-    const paintNoise = () => {
-        if (frame === 9) {
-            frame = 0;
-        } else {
-            frame++;
-        }
-        ctx.putImageData(noiseData[frame], 0, 0);
-    };
-    // Loop
-    const loop = () => {
-        paintNoise(frame);
-        loopTimeout = window.setTimeout(() => {
-            window.requestAnimationFrame(loop);
-        }, (1000 / 25));
-    };
-    // Setup
-    const setup = () => {
-        wWidth = window.innerWidth;
-        wHeight = window.innerHeight;
-        canvas.width = wWidth;
-        canvas.height = wHeight;
-        for (let i = 0; i < 10; i++) {
-            createNoise();
-        }
-        loop();
-    };
-    // Reset
-    let resizeThrottle;
-    const reset = () => {
-        window.addEventListener('resize', () => {
-            window.clearTimeout(resizeThrottle);
-            resizeThrottle = window.setTimeout(() => {
-                window.clearTimeout(loopTimeout);
-                setup();
-            }, 200);
-        }, false);
-    };
-    // Init
-    const init = (() => {
-        canvas = document.getElementById('noise');
-        ctx = canvas.getContext('2d');
-        setup();
-    })();
-  };
-  noise();
-  </script>
-  <style>
-  .letter {display: inline-block; opacity: 0;} .tricksword {white-space: nowrap;}
-  </style>
-  <script src=
-  "https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  
-  <script>
-
-
-  var tricksWord = document.getElementsByClassName("tricks");
-  for (var i = 0; i < tricksWord.length; i++) {
-
-  var wordWrap = tricksWord.item(i);
-  wordWrap.innerHTML = wordWrap.innerHTML.replace(/(^|<\/?[^>]+>|\s+)([^\s<]+)/g, '$1<span class="tricksword">$2<\/span>');
-
-  }
-
-  var tricksLetter = document.getElementsByClassName("tricksword");
-  for (var i = 0; i < tricksLetter.length; i++) {
-
-   var letterWrap = tricksLetter.item(i);
-   letterWrap.innerHTML = letterWrap.textContent.replace(/\S/g, "<span class='letter'>$&<\/span>");
-
-  }
-
-  // Fade Up Animation
-  var fadeUp = anime.timeline({
-  loop: false,
-  autoplay: false,
-  });
-
-  fadeUp 
-  .add({
-    targets: '.fade-up .letter',
-    translateY: [100,0],
-    translateZ: 0,
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 1400,
-    delay: (el, i) => 300 + 40 * i
-  });
-
-
-  fadeUp.play();
-
-  </script>
-  <script>
-
-  $(document).keypress(
-  function(event){
-    if (event.which == '13') {
-      event.preventDefault();
-    }
-  });
-
-  $(document).keydown(function(objEvent) {
-    if (objEvent.keyCode == 9) {  //tab pressed
-        objEvent.preventDefault(); // stops its action
-    }
-  })
-
-  $('.form_button, .radio_button').click(function() {
-        $('.form_next').click();
-  });
-
-  var slideNumber = $('.slider_slide').length - 1;
-
-  $('.total-number').text(slideNumber);
-
-  function sliderAnimation() {
-    var currentSlide = $('.w-slider-dot.w-active').index();
-    if (currentSlide == 0) {
-        $('.form_prev').addClass('disabled-prev');
-    } else {
-        $('.form_prev').removeClass('disabled-prev');
-    }
-    $('.first').text(currentSlide - 1);
-    $('.second').text(currentSlide);
-    var percent = (currentSlide / slideNumber) * 100;
-    var percentRound = percent.toFixed(0);
-    $('.form_percent').text( percentRound );
-    $('.form_progress-fill').css('width', percentRound + '%');
-  }
-
-  $('.form_prev, .form_next').click(function() {
-        setTimeout(() => {  
-                sliderAnimation();
-        }, 200);
-  });
-
-
-  function validateForm(item) {
-  var siblingButton = item.closest('.slider_slide').find('.form_button');
-  if ( item.val().length > 1 ) {
-        siblingButton.addClass('form-active');
-  } else {
-        siblingButton.removeClass('form-active');
-  }
-  }
-
-  $( ".form_field" ).keydown(function() {
-        validateForm($(this));
-  });
-
-  $(".form_field").focusout(function(){
-  validateForm($(this));
-  });
-  </script>
 </body>
 </html>
