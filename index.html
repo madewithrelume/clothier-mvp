@@ -104,7 +104,9 @@ visibility: hidden !important;}
         "nav__logo-link w-inline-block w--current"><img src=
         "https://cdn.shopify.com/s/files/1/0002/7960/9380/files/CLOTHIER_1.svg"
         loading="lazy" alt="Clothier Logo" class="nav__logo-img"></a>
-        <div class="mav__right">
+        
+{%comment%}
+<div class="mav__right">
           <div class="nav__menu">
             <div class="nav__line"></div><a data-color="#f88cd4"
             href="/" aria-current="page" class=
@@ -129,10 +131,17 @@ visibility: hidden !important;}
           </div>
           <div class="nav__icon-line">
             <div class="fill is--2"></div>
-          </div></a>
+          </div></a> 
+
+
         </div>
+{%endcomment%}
+
       </div>
     </nav>
+
+
+
     <section class="section is--hero">
       <div class="container is--form">
         <div class="hero__left is--alt">
@@ -153,7 +162,9 @@ visibility: hidden !important;}
                 <div class="slider_mask w-slider-mask">
                   <div class="slider_slide w-slide">
                     <div class="slider_slide-fill">
-                      <h2 class="form_question">What's your full
+                      
+
+<h2 class="form_question">What's your full
                       name?</h2><input type="text" class=
                       "form_field w-input" maxlength="256" name=
                       "Full-name" data-name="Full name"
@@ -164,8 +175,21 @@ visibility: hidden !important;}
                   </div>
                   <div class="slider_slide w-slide">
                     <div class="slider_slide-fill">
+
+
+<h2 class="form_question">Where is your business located?</h2><input type="text" class=
+                      "form_field w-input" maxlength="256" name=
+                      "Full-name" data-name="Location"
+                      placeholder="123 Street Name, Johannesburg, Gauteng, 0000" id="Location"
+                      required=""><a href="#" class=
+                      "form_button w-button">Next</a>
+                    </div>
+                  </div>
+                  <div class="slider_slide w-slide">
+                    <div class="slider_slide-fill">
+
                       
-<h2 class="form_question">Choose any category that suits you best</h2>
+<h2 class="form_question">Choose any category that suits you best.</h2>
                       <div class=
                       "w-form-formradioinput w-form-formradioinput--inputType-custom radio_button w-radio-input">
                       </div><label class=
@@ -207,13 +231,34 @@ visibility: hidden !important;}
                   <div class="slider_slide w-slide">
                     <div class="slider_slide-fill">
                       <h2 class="form_question">What's your email address?</h2><input type="text"
-                      class="form_field w-input" maxlength="10"
+                      class="form_field w-input" maxlength="100"
                       name="Username" data-name="Username"
                       placeholder="email@example.com" id="Username"
                       required=""><a href="#" class=
                       "form_button w-button">Next</a>
-                    </div>
-                  </div>
+                    </div></div>
+
+
+                  <div class="slider_slide w-slide">
+                    <div class="slider_slide-fill">
+                      <h2 class="form_question">What's your phone number?</h2><input type="text"
+                      class="form_field w-input" maxlength="10"
+                      name="Phone" data-name="Phone"
+                      placeholder="012 123 1234" id="Phone"
+                      required=""><a href="#" class=
+                      "form_button w-button">Next</a>
+
+
+                  <div class="slider_slide w-slide">
+                    <div class="slider_slide-fill">
+                      <h2 class="form_question">What's your minimum order quantity?</h2><input type="text"
+                      class="form_field w-input" maxlength="100"
+                      name="Username" data-name="Username"
+                      placeholder="0" id="MOQ"
+                      required=""><a href="#" class=
+                      "form_button w-button">Next</a>
+
+
                   <div class="slider_slide w-slide">
                     <div class="slider_slide-fill">
                       <h2 class="form_question">Where is your business located?</h2>
@@ -225,7 +270,7 @@ visibility: hidden !important;}
                       value="Beginner" style=
                       "opacity:0;position:absolute;z-index:-1"><span for="Beginner-2"
                       class=
-                      "radio_label w-form-label">Gauteng</span></label>
+                      "radio_label w-form-label">Phone</span></label>
                       
 
 <div class=
@@ -236,7 +281,7 @@ visibility: hidden !important;}
                       "Learn" value="Intermediate" style=
                       "opacity:0;position:absolute;z-index:-1"><span for="Intermediate-2"
                       class=
-                      "radio_label w-form-label">Western Cape</span></label>
+                      "radio_label w-form-label">Email</span></label>
                     </div>
                   </div>
                   <div class="slider_slide w-slide">
